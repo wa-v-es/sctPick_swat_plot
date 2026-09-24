@@ -1,0 +1,12 @@
+# GMT 6 Session common arguments shelf
+BEGIN GMT 6.5.0
+B	a30f15g30:Time after origin (s):/1:Distance (deg):WSen
+J	X
+JR	R4.0c
+JX	X10c/4c
+R	759.44/1095.85/91.3925/96.3209
+X	7c
+Y	-3c
+@G	30 0
+@L	98
+END

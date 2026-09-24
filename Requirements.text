@@ -1,0 +1,16 @@
+# Python packages for script sct_pick_vespa.py
+mpl_point_clicker
+pygmt
+cmaptools
+obspy
+xarray
+scipy
+json
+# for sct_bf_swat.py
+taup
+scattererwhereartthou
+pandas
+cartopy
+cmcrameri
+xkcd
+scikit-image

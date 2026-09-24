@@ -1,0 +1,9 @@
+-0.75 -3 10 0 0 LT Origin: 2022 09 14 11:04
+-0.75 -2 10 0 0 LT ArrCen la/lo/elv: 68.45 -152.55 461 Nst:17
+-0.75 -1 10 0 0 LT ArrBaseStn: D22K, grid la/lp 69, -153
+-0.75 0 10 0 0 LT Event la/lo/dp: -21.19 170.27 137.00 Mb:7.0
+-0.75 1 10 0 0 LT Dist: 93.6 Baz (Arr-Evt): 214.4
+-0.75 2 10 0 0 LT Frequencies: .05 - .5 Hz Delta: 60
+-0.75 3 10 0 1 LT TrcesSNR mn,SD,min,max: 11.32 3.34 7.50 18.35
+-0.75 4 10 0 1 LT Pred PP (prem) time/U: 1005.85 7.785
+-0.75 5 10 0 1 LT Pick time(beam)/U/Bz (XF): 1001.95 7.70  0.00
