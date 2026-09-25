@@ -234,7 +234,7 @@ def plot_vespa_pick_slow(folder_pattern,grid_num=None,clicker_onoff=True,plot_am
     plt.rcParams.update({'font.size': 14})
     clicker_onoff=True
     for folder in matching_folders:
-        main_folder='sac_files/'+folder+'/'
+        main_folder=folder+'/'
 
         folder_datapack=main_folder+'data_pack/'
         grid_folder=main_folder+'grid_folder'
@@ -621,20 +621,25 @@ def main():
     clicker_onoff=True
     grid_num=82 # choose this..if None, it runs for all grids in the folder.
     #STEP 1
-    sl_klicker,slow_grd,baz_grd,deets,grid_number,utc_dt,pick_folder,ax_baz,max_mean=plot_vespa_pick_slow(folder_pattern,grid_num=grid_num,clicker_onoff,plot_amp_factor)
+    sl_klicker,slow_grd,baz_grd,deets,grid_number,utc_dt,pick_folder,ax_baz,max_mean=plot_vespa_pick_slow(folder_pattern,grid_num,clicker_onoff,plot_amp_factor)
     #when picking scatteres, the left click should be high slow/baz and right click low slow/baz!!!
+    if not clicker_onoff:
+        print('Exiting as clicker_onoff set as False')
+        sys.exit()
     # print('RETURN TO KEEP GOING....')
-    val1 = input("choose from slowness..press enter ")
+    val1 = input("Click on slowness/time..press return when done!")
 
     #STEP2
     slow_click=sl_klicker.get_positions()
     klicker_baz=run_klicker_baz(ax_baz)
 
     # STEP 3
-    val2 = input("choose from backazimuth.. enter BazOffset value!")
+    val2 = input("choose on backazimuth/time.. enter BazOffset value when done and hit return: ")
 
     baz_click=klicker_baz.get_positions()
     use_klicker_save_scts(pick_folder,grid_number,utc_dt,slow_grd,slow_click,baz_grd,baz_click,deets,max_mean,val2)
+    print('------------------------------------------------------------------')
+    print('Picked scatters info saved as Json in sac_files/eq_folder/py_picks')
     ###
 
 if __name__== "__main__":
